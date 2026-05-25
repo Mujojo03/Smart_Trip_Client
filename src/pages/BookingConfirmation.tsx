@@ -17,6 +17,8 @@ export default function BookingConfirmation() {
   const exp = EXPEDITIONS.find(e => e.id === id)
   const state = location.state as ConfirmationState | null
 
+  //expdition ticket details are passed via state from the booking flow.
+  // If user lands here without booking, show message and link to browse expeditions
   if (!exp || !state) return (
     <div className="max-w-xl mx-auto px-6 py-20 text-center text-gray-400">
       No booking found. <Link to="/" className="text-olive underline">Browse expeditions</Link>
