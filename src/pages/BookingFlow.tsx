@@ -58,6 +58,8 @@ export default function BookingFlow() {
   function handlePayment() {
     setSubmitting(true)
     // Simulate payment processing
+    // In a real app, here you'd integrate with M-Pesa API or Coinbase Commerce and handle callbacks/webhooks for payment confirmation
+    //Later intergrations, Bitcoin Payments, PayPal, Credit Cards etc can be added here
     setTimeout(() => {
       setSubmitting(false)
       navigate(`/confirmation/${exp!.id}`, {
